@@ -1,32 +1,22 @@
-# Customer-Shopping-Behavior-Analysis
-End-to-end analysis of customer shopping behavior using Python, SQL Server, and Power BI to uncover spending patterns, top categories, and subscription trends.
+Customer Shopping Behavior AnalysisThis project looks at customer shopping data to understand how people spend, what they buy, and how subscriptions play a role.I used Python for cleaning and analysis, SQL Server for queries, and Power BI for the dashboard.DatasetTransactional purchase data (CSV)
+18 columns originally, 19 after adding purchase_frequency_days
+No missing values
 
-Customer Shopping Behavior AnalysisOverviewEnd-to-end analytics project analyzing customer purchase data to uncover spending patterns, product preferences, segments, and subscription behavior.Pipeline: Python (cleaning & EDA) → SQL Server (T-SQL analysis) → Power BI (dashboard) → Report & presentationDatasetSource: Transactional purchase data (CSV)  
-Columns: 18 original → 19 after feature engineering  
-Missing values: None
+Includes customer details, purchase amount, category, season, discounts, shipping type, ratings, and subscription status.What I DidLoaded and cleaned the data in Python, then created a new frequency column
+Moved the cleaned data into SQL Server and wrote queries for revenue, products, segments, and subscriptions
+Built a Power BI dashboard with filters for gender, category, shipping, and subscription status
+Put the findings into a report and presentation
 
-Key fields: Customer demographics, purchase details (amount, category, season), discounts, shipping, ratings, subscription statusStepsPython — Load data, clean, EDA, engineer purchase_frequency_days  
-SQL Server — Load cleaned data and run business queries  
-Power BI — Build interactive dashboard with filters  
-Reporting — Project report and presentation
+Key FindingsAverage review rating: 3.75
+Average purchase amount: $59.54
+About 60% of customers are not subscribed, 40% are
+Clothing is the top category by both revenue and number of purchases
+Sales are fairly steady across seasons, with Spring and Winter a bit higher
 
-Key ResultsMetric
-Finding
-Avg. review rating
-3.75
-Avg. purchase amount
-$59.54
-Subscription split
-~60% non-subscribed / ~40% subscribed
-Top category
-Clothing (highest revenue & volume)
-Seasonality
-Even across seasons; Spring & Winter slightly higher
+ToolsPython (Pandas), SQL Server, Power BI, SQLAlchemy, pyodbcHow to RunInstall packages: pip install pandas sqlalchemy pyodbc
+Run the notebook to clean the data
+Load the data into SQL Server and run the queries
+Open the Power BI file to view the dashboard
 
-ToolsPython (Pandas) · SQL Server (T-SQL) · Power BI · SQLAlchemy / pyodbcHow to RunInstall dependencies: pip install pandas sqlalchemy pyodbc  
-Run the Python notebook for cleaning and EDA  
-Load data into SQL Server and execute queries  
-Open the Power BI file and refresh visuals
-
-ConclusionComplete analytics pipeline from raw data to dashboard and report. Clothing drives the most revenue; the ~40% subscription rate highlights a clear growth opportunity.
+SummaryThis is a full pipeline from raw CSV to SQL analysis and a working dashboard. Clothing brings in the most revenue, and the low subscription rate looks like a good area to improve.
 
